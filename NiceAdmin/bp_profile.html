@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Bizpinion - My Dashboard</title>
+  <title>Bizpinion - My Profile</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -130,14 +130,14 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link" href="bp_index.html">
+        <a class="nav-link collapsed" href="bp_index.html">
           <i class="bi bi-grid"></i>
           <span>My Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
 	  
 	  <li class="nav-item">
-        <a class="nav-link collapsed" href="bp_profile.html">
+        <a class="nav-link" href="bp_profile.html">
           <i class="bi bi-person-circle"></i>
           <span>My Account</span>
         </a>
@@ -184,165 +184,140 @@
 
   <main id="main" class="main">
     <section class="section dashboard">
-        <!-- Points row -->
-        
-          <div class="row">
+		<!-- Buttons -->
+		<div>
+			<button type="button" class="btn btn-primary">Edit Profile</button>
+			<button type="button" class="btn btn-primary">Security Questions</button>
+		</div>
+		<!-- Registration Info Card -->
+		<div class="card mt-3">
+		<div class="card-body">
+		  <h5 class="card-title">Registration Information</h5>
+			<table class="table">
+				<tr>
+					<td width="50%">Email Address</td>
+					<td>olivemencorporado@gmail.com</td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td>TEST2 TEST2</td>
+				</tr>
+				<tr>
+					<td>Date of Birth</td>
+					<td>04-01-1958</td>
+				</tr>
 
-            <!-- Available Points Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Points available for redemption:</h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-bag-check-fill"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>145</h6>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div><!-- End Available Points Card -->
-			
-			<!-- Lifetime Points Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Lifetime points earned:</h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-gift-fill"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>780</h6>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div><!-- End Lifetime Points Card -->
-        </div><!-- End Points Cards -->
-
-		<!-- Rewards and Surveys row -->
-          <div class="row mt-3">
-			 <!-- Rewards Card  -->
-			  <div class="card col-sm-5 me-4">
-				<div class="card-header card-header-blue">Rewards</div>
-				<div class="card-body">
-				  <!-- Table with hoverable rows -->
-				  <table class="table table-hover">
-					<thead>
-					  <tr>
-						<th scope="col">Rewards</th>
-						<th scope="col">Status</th>
-					  </tr>
-					</thead>
-					<tbody>
-						<tr>
-						   <td><a href="panelist/rewards.php?action=readmore&r_id=9">$10 Gift Card via Reward Link</a></td>
-						   <td>Available</td>
-						</tr>
-						<tr>
-						   <td><a href="panelist/rewards.php?action=readmore&r_id=3">$25 Cash (via PayPal)</a></td>
-						   <td>Available</td>
-						</tr>
-						<tr>
-						   <td><a href="panelist/rewards.php?action=readmore&r_id=7">$50 Cash (via PayPal)</a></td>
-						   <td>Available</td>
-						</tr>
-						<tr>
-						   <td><a href="panelist/rewards.php?action=readmore&r_id=8">$100 Cash (via PayPal)</a></td>
-						   <td>Available</td>
-						</tr>
-					</tbody>
-				  </table>
-				  <!-- End Table with hoverable rows -->
-				</div>
-			  </div><!-- End Rewards Card -->	
-			  
-			  <!-- Surveys Card  -->
-			  <div class="card col-lg-6">
-				<div class="card-header card-header-blue">Available Surveys</div>
-				<div class="card-body">
-				  <!-- Table with hoverable rows -->
-				  <table class="table table-hover">
-					<thead>
-					  <tr>
-						<th scope="col">Name</th>
-						<th scope="col">Status</th>
-						<th scope="col">Points</th>
-						<th scope="col">Note</th>
-					  </tr>
-					</thead>
-					<tbody>
-						<tr>
-						   <td>26964 - New Survey</td>
-						   <td>Available</td>
-						   <td>400</td>
-						   <td><a href="https://demo.bizpinion.com/pane1survey.php?id=VTYaRYNz4e6C8QuXAEzbi6" target="_blank">Take Survey</a></td>
-						</tr>
-						<tr>
-						   <td>26904 - New Survey</td>
-						   <td>Available</td>
-						   <td>400</td>
-						   <td><a href="https://demo.bizpinion.com/pane1survey.php?id=16iHQYNz4e6C8QuXAEzbi6" target="_blank">Take Survey</a></td>
-						</tr>
-					</tbody>
-				  </table>
-				  <!-- End Table with hoverable rows -->
-				</div>
-			  </div><!-- End Surveys Card -->
-        </div><!-- End Rewards and Surveys row -->
+				<tr>
+					<td>Gender</td>                
+					<td>Female</td>        
+				</tr>
+				<tr>
+					<td>Zip/Postal Code</td>
+					<td>95667</td>
+				</tr>
+				<tr>
+					<td>Country</td>
+					<td>United States</td>
+				</tr>
+				<tr>
+					<td>
+						<span title="This is the primary language in which you will receive all Bizpinion-related communications.">Primary Communication Language Preference</span>        </td>
+					<td>
+						English        </td>
+				</tr>
+				<tr>
+					<td>Approximately how many employees work for your company (all locations)?</td>
+					<td>500 - 999 employees</td>
+				</tr>
+				<tr>
+					<td>Which best describes your company's primary industry?</td>
+					<td>Computer - Software</td>
+				</tr>
+				<tr>
+					<td>Which best describes your title or position?</td>
+					<td>Technical Staff - IT Manager / Director</td>
+				</tr>    
+			</table>
+		</div>
+		</div><!-- End Registration Info Card -->
 		
-		<!-- News and Tickets row -->
-          <div class="row mt-3">
-			 <!-- Rewards Card  -->
-			  <div class="card col-sm-5 me-4">
-				<div class="card-header card-header-blue">Latest News</div>
-				<div class="card-body mt-2">
-				  <small>January 3rd, 2014</small>
-				  <p>We look forward to hearing your opinions!</p>
-				  <p><a href="panelist/news.php?news_id=4">Read More</a></p>
-				  <hr/>
-				 
-				</div>
-			  </div><!-- End Rewards Card -->	
-			  
-			  <!-- Surveys Card  -->
-			  <div class="card col-lg-6">
-				<div class="card-header card-header-blue">My Open Tickets</div>
-				<div class="card-body">
-				  <!-- Table with hoverable rows -->
-				  <table class="table table-hover">
-					<thead>
-					  <tr>
-						<th scope="col">ID</th>
-						<th scope="col">Date</th>
-						<th scope="col">Project</th>
-						<th scope="col">Issue Title</th>
-						<th scope="col">Priority</th>
-						<th scope="col">Status</th>
-					  </tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td colspan="6">
-								<p class="text-center">No Pending Tickets</p>
-							</td>
-						</tr>
-					</tbody>
-				  </table>
-				  <!-- End Table with hoverable rows -->
-				</div>
-			  </div><!-- End Surveys Card -->
-        </div><!-- End News and Tickets row -->
-      
+		  <!-- Profile Information Card -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Profile Information</h5>
+              <table class="table">
+			   <tr>
+				  <td>How often would you like to receive paid market research opportunities?</td>
+				  <td>
+					 Please send me all opportunities        
+				  </td>
+			   </tr>
+			   <tr>
+				  <td>What is your current employment status?</td>
+				  <td>Student</td>
+			   </tr>
+			   <tr>
+				  <td>What is your company's approximate annual revenue?</td>
+				  <td>Less than $100,000</td>
+			   </tr>
+			   <tr>
+				  <td>Are you a Small Business Owner?</td>
+				  <td>No</td>
+			   </tr>
+			   <tr>
+				  <td>Approximately how many computers are in your place of employment (All locations)?</td>
+				  <td>5 - 9</td>
+			   </tr>
+			   <tr>
+				  <td>Which of the following best describes your ethnicity?</td>
+				  <td>Caucasian / White</td>
+			   </tr>
+			   <tr>
+				  <td>Are you of Latino or Hispanic descent?</td>
+				  <td>Yes</td>
+			   </tr>
+			   <tr>
+				  <td>What is your marital status?</td>
+				  <td>Domestic Partnership</td>
+			   </tr>
+			   <tr>
+				  <td>Education</td>
+				  <td>Bachelor's Degree</td>
+			   </tr>
+			   <tr>
+				  <td>What is your total annual household income?</td>
+				  <td>$35,000 - $49,999</td>
+			   </tr>
+			   <tr>
+				  <td>Do you own or lease an automobile?</td>
+				  <td>Yes</td>
+			   </tr>
+			   <tr>
+				  <td>Have you flown for work or pleasure within the last year?</td>
+				  <td>Internationally</td>
+			   </tr>
+			   <tr>
+				  <td>Are you a smoker?</td>
+				  <td>Cigars</td>
+			   </tr>
+			   <tr>
+				  <td>Which type(s) of paid market research opportunities in addition to online surveys would you like to receive?</td>
+				  <td>In-person focus groups and interviews (requires your participation at a local physical location)</td>
+			   </tr>
+			   <tr>
+				  <td>Which paid market research topics would you like to participate in?</td>
+				  <td>Business topics (topics related ONLY to my profession or decision making authority)</td>
+			   </tr>
+			   <tr>
+				  <td>Do you make or influence purchasing decisions for your company?</td>
+				  <td>No</td>
+			   </tr>
+			   <tr>
+				  <td>Which of the following additional languages (if any) do you feel comfortable completing surveys in?</td>
+				  <td>English
+			</table>
+            </div>
+          </div><!-- End Profile Information Card -->
     </section>
 
   </main><!-- End #main -->
