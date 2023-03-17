@@ -3,3 +3,12 @@
 /* -------------------------------------------------------------------------- */
 /* prettier-ignore */
 /*# sourceMappingURL=user.css.map */
+
+.card-header-blue {
+    border-color: #ebeef4;
+    background-color: #447BF7;
+}
+
+.card-header-white-text {
+	color: #FFFFFF;
+}
