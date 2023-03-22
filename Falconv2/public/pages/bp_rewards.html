@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Bizpinion - My Dashboard</title>
+    <title>Bizpinion - My Rewards</title>
 
 
     <!-- ===============================================-->
@@ -38,6 +38,7 @@
     <link href="../assets/css/user-rtl.css" rel="stylesheet" id="user-style-rtl">
     <link href="../assets/css/user.css" rel="stylesheet" id="user-style-default">
     <link href="../vendors/dataTables-bs5/dataTables.bootstrap5.min.css" rel="stylesheet">
+    
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
     <script>
@@ -55,11 +56,35 @@
         userLinkRTL.setAttribute('disabled', true);
       }
     </script>
-	<script src="https://bizpinion.com/js/jquery.js"></script>
+
+    <script src="https://bizpinion.com/js/jquery.js"></script>
+
   </head>
 
 
   <body>
+    <script>
+      $(document).ready(function() {
+        $('#reward').dataTable({
+            "oLanguage": {
+                "sEmptyTable": "No data available in table"
+                ,"sSearch" :"Search:"
+                ,"sProcessing" :"Processing"
+                ,"oPaginate" :{
+                    "sPrevious" : "Previous"
+                    ,"sNext" : "Next"
+                    ,"sLast" : "Last"
+                    ,"sFirst" : "First"                    
+                }
+                ,"sZeroRecords" : "No matching records found"
+                ,"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries"
+                ,"sInfoEmpty": "Showing 0 to 0 of 0 entries"                
+                ,"sLengthMenu": "Show _MENU_ entries"
+                ,"sInfoFiltered" : "(filtered from _MAX_ total entries)"
+            }
+        });
+      });
+  </script>
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -96,7 +121,7 @@
               <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
                 
                 <li class="nav-item">
-                  <!-- parent pages--><a class="nav-link active" href="../pages/bp_starter.html" role="button">
+                  <!-- parent pages--><a class="nav-link" href="../pages/bp_starter.html" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">dashboard</span></span><span class="nav-link-text ps-1">My Dashboard</span>
                     </div>
                   </a>
@@ -108,11 +133,11 @@
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">receipt</span></span><span class="nav-link-text ps-1">My Surveys</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link" href="../pages/bp_rewards.html" role="button">
+				  <!-- parent pages--><a class="nav-link active" href="../pages/bp_rewards.html" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">card_giftcard</span></span><span class="nav-link-text ps-1">My Rewards</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link"  target="_blank" href="https://bizpinion.com/pages/frequently-asked-questions-faq-/" role="button">
+				  <!-- parent pages--><a class="nav-link" target="_blank" href="https://bizpinion.com/pages/frequently-asked-questions-faq-/" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">contact_support</span></span><span class="nav-link-text ps-1">F.A.Q.</span>
                     </div>
                   </a>
@@ -124,6 +149,7 @@
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">person_remove</span></span><span class="nav-link-text ps-1">Cancel Account</span>
                     </div>
                   </a>
+                  
             </div>
           </div>
         </nav>
@@ -157,302 +183,192 @@
               </li>
             </ul>
           </nav>
-		  <div class="row g-0">
-			  <div class="card mb-3 me-3" style="max-width: 480px;">
-				  <div class="row g-0">
-					<div class="col-md-4">
-					  <img src="../assets/img/generic/21.jpg" class="img-fluid rounded-start" alt="...">
-					  
-					</div>
-					<div class="col-md-8">
-					  <div class="card-body">
-						<h5 class="card-title">140</h5>
-						<p class="card-text">Points available for redemption</p>
-					  </div>
-					</div>
+		  
+		  
+		  
+		  <div class="card mb-3 mt-2">
+			  <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../assets/img/icons/spot-illustrations/corner-9.png);">
+			  </div> <!--/.bg-holder-->
+			  <div class="card-body position-relative">
+				<div class="row">
+				  <div class="col-lg-8">
+					<h4>Requested Rewards</h4>
+            <div class="table-responsive scrollbar">
+              <table class="table" id="reward">
+                <thead>
+                <tr>
+                  <th scope="col">Reward</th>
+                  <th scope="col">Date Submitted</th>
+                  <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+              </table>
+              </div>
+					
 				  </div>
-			  </div>
-			  
-			  <div class="card mb-3" style="max-width: 480px;">
-				  <div class="row g-0">
-					<div class="col-md-4">
-					  <img src="../assets/img/generic/22.jpg" class="img-fluid rounded-start" alt="...">
-					</div>
-					<div class="col-md-8">
-					  <div class="card-body">
-						<h5 class="card-title">320</h5>
-						<p class="card-text">Lifetime points earned</p>
-					  </div>
-					</div>
-				  </div>
+				</div>
 			  </div>
 		  </div>
-		  
-		  
-		  <div class="row g-3 mb-3 mt-2">
-			  <div class="col-lg-4">
-				  <div class="card">
-					<div class="card-header border-bottom card-header-blue">
-					  <div class="row flex-between-end">
-						<div class="col-auto align-self-center">
-						  <h5 class="mb-0 card-header-white-text" data-anchor="data-anchor">Rewards</h5>
-						</div>
-					  </div>
-					</div>
-					<div class="card-body pt-0">
-					  <div class="tab-content">
-						<div class="tab-pane preview-tab-pane active" role="tabpanel" aria-labelledby="tab-dom-929b4ec7-a105-4155-ad16-2ad8bbc32b32" id="dom-929b4ec7-a105-4155-ad16-2ad8bbc32b32">
-						  <div class="table-responsive scrollbar">
-							<table class="table">
-							  <thead>
-								<tr>
-								  <th scope="col">Rewards</th>
-								  <th scope="col">Status</th>
-								</tr>
-							  </thead>
-							  <tbody>
-								<tr>
-								   <td><a href="bp_tango10.html">$10 Gift Card via Reward Link</a></td>
-								   <td>Available</td>
-								</tr>
-								<tr>
-								   <td><a href="bp_paypal25.html">$25 Cash (via PayPal)</a></td>
-								   <td>Available</td>
-								</tr>
-								<tr>
-								   <td><a href="bp_paypal50.html">$50 Cash (via PayPal)</a></td>
-								   <td>Available</td>
-								</tr>
-								<tr>
-								   <td><a href="bp_paypal100.html">$100 Cash (via PayPal)</a></td>
-								   <td>Available</td>
-								</tr>
-							  </tbody>
-							</table>
-						  </div>
-						</div>
-						<div class="tab-pane code-tab-pane" role="tabpanel" aria-labelledby="tab-dom-656ad873-9efc-440c-ba8c-5673c9358939" id="dom-656ad873-9efc-440c-ba8c-5673c9358939">
-					  <pre class="scrollbar rounded-1" style="max-height:420px"><code class="language-html">&lt;div class=&quot;table-responsive scrollbar&quot;&gt;
-						  &lt;table class=&quot;table&quot;&gt;
-					  &lt;thead&gt;
-						&lt;tr&gt;
-						  &lt;th scope=&quot;col&quot;&gt;Rewards&lt;/th&gt;
-						  &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
-						&lt;/tr&gt;
-					  &lt;/thead&gt;
-					  &lt;tbody&gt;
-						&lt;tr&gt;
-						   &lt;td&gt;&lt;a href=&quot;panelist/rewards.php?action=readmore&r_id=9&quot;&gt;$10 Gift Card via Reward Link&lt;/a&gt;&lt;/td&gt;
-						   &lt;td&gt;Available&lt;/td&gt;
-						&lt;/tr&gt;
-						&lt;tr&gt;
-						   &lt;td&gt;&lt;a href=&quot;panelist/rewards.php?action=readmore&r_id=3&quot;&gt;$25 Cash (via PayPal)&lt;/a&gt;&lt;/td&gt;
-						   &lt;td&gt;Available&lt;/td&gt;
-						&lt;/tr&gt;
-						&lt;tr&gt;
-						   &lt;td&gt;&lt;a href=&quot;panelist/rewards.php?action=readmore&r_id=7&quot;&gt;$50 Cash (via PayPal)&lt;/a&gt;&lt;/td&gt;
-						   &lt;td&gt;Available&lt;/td&gt;
-						&lt;/tr&gt;
-						&lt;tr&gt;
-						   &lt;td&gt;&lt;a href=&quot;panelist/rewards.php?action=readmore&r_id=8&quot;&gt;$100 Cash (via PayPal)&lt;/a&gt;&lt;/td&gt;
-						   &lt;td&gt;Available&lt;/td&gt;
-						&lt;/tr&gt;
-					  &lt;/tbody&gt;
-					&lt;/table&gt;
-	&lt;/div&gt;</code></pre>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				</div>
-				<div class="col-lg-8">
-				   <div class="card">
-					<div class="card-header border-bottom card-header-blue">
-					  <div class="row flex-between-end">
-						<div class="col-auto align-self-center">
-						  <h5 class="mb-0 card-header-white-text" data-anchor="data-anchor">Available Surveys</h5>
-						</div>
-					  </div>
-					</div>
-					<div class="card-body pt-0">
-					  <div class="tab-content">
-						<div class="tab-pane preview-tab-pane active" role="tabpanel" aria-labelledby="tab-dom-929b4ec7-a105-4155-ad16-2ad8bbc32b32" id="dom-929b4ec7-a105-4155-ad16-2ad8bbc32b32">
-						  <div class="table-responsive scrollbar">
-							<table class="table">
-							  <thead>
-								<tr>
-									<th scope="col">Name</th>
-									<th scope="col">Status</th>
-									<th scope="col">Points</th>
-									<th scope="col">Note</th>
-								  </tr>
-							  </thead>
-							  <tbody>
-								<tr>
-								   <td>26964 - New Survey</td>
-								   <td>
-										Available <i class="bi bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Please click Take Survey to begin"></i>
-									</td>
-								   <td>400</td>
-								   <td><a href="https://demo.bizpinion.com/pane1survey.php?id=VTYaRYNz4e6C8QuXAEzbi6" target="_blank">Take Survey</a></td>
-								</tr>
-								<tr>
-								   <td>26904 - New Survey</td>
-								   <td>
-										Available <i class="bi bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Please click Take Survey to begin"></i>
-									</td>
-								   <td>400</td>
-								   <td><a href="https://demo.bizpinion.com/pane1survey.php?id=16iHQYNz4e6C8QuXAEzbi6" target="_blank">Take Survey</a></td>
-								</tr>
-							  </tbody>
-							</table>
-						  </div>
-						</div>
-						<div class="tab-pane code-tab-pane" role="tabpanel" aria-labelledby="tab-dom-656ad873-9efc-440c-ba8c-5673c9358939" id="dom-656ad873-9efc-440c-ba8c-5673c9358939">
-					  <pre class="scrollbar rounded-1" style="max-height:420px"><code class="language-html">&lt;div class=&quot;table-responsive scrollbar&quot;&gt;
-						  &lt;table class=&quot;table&quot;&gt;
-						  &lt;thead&gt;
-							&lt;tr&gt;
-								&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
-								&lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
-								&lt;th scope=&quot;col&quot;&gt;Points&lt;/th&gt;
-								&lt;th scope=&quot;col&quot;&gt;Note&lt;/th&gt;
-							  &lt;/tr&gt;
-						  &lt;/thead&gt;
-						  &lt;tbody&gt;
-							&lt;tr&gt;
-							   &lt;td&gt;26964 - New Survey&lt;/td&gt;
-							   &lt;td&gt;
-									Available &lt;i class=&quot;bi bi-question-circle&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Please click Take Survey to begin&quot;&gt;&lt;/i&gt;
-								&lt;/td&gt;
-							   &lt;td&gt;400&lt;/td&gt;
-							   &lt;td&gt;&lt;a href=&quot;https://demo.bizpinion.com/pane1survey.php?id=VTYaRYNz4e6C8QuXAEzbi6&quot; target=&quot;_blank&quot;&gt;Take Survey&lt;/a&gt;&lt;/td&gt;
-							&lt;/tr&gt;
-							&lt;tr&gt;
-							   &lt;td&gt;26904 - New Survey&lt;/td&gt;
-							   &lt;td&gt;
-									Available &lt;i class=&quot;bi bi-question-circle&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Please click Take Survey to begin&quot;&gt;&lt;/i&gt;
-								&lt;/td&gt;
-							   &lt;td&gt;400&lt;/td&gt;
-							   &lt;td&gt;&lt;a href=&quot;https://demo.bizpinion.com/pane1survey.php?id=16iHQYNz4e6C8QuXAEzbi6&quot; target=&quot;_blank&quot;&gt;Take Survey&lt;/a&gt;&lt;/td&gt;
-							&lt;/tr&gt;
-						  &lt;/tbody&gt;
-						&lt;/table&gt;
-	&lt;/div&gt;</code></pre>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			</div>
-			
-			<div class="row g-3 mb-3">
-			  <div class="col-lg-4">
-				  <div class="card">
-					<div class="card-header border-bottom card-header-blue">
-					  <div class="row flex-between-end">
-						<div class="col-auto align-self-center">
-						  <h5 class="mb-0 card-header-white-text" data-anchor="data-anchor">Latest News</h5>
-						</div>
-					  </div>
-					</div>
-					<div class="card-body pt-0  mt-2">
-					  <small>January 3rd, 2014</small>
-					  <p>We look forward to hearing your opinions!</p>
-					  <p><a href="bp_news.html">Read More</a></p>
-					  <hr/>
-					</div>
-				  </div>
-				</div>
-				<div class="col-lg-8">
-				   <div class="card">
-					<div class="card-header border-bottom card-header-blue">
-					  <div class="row flex-between-end">
-						<div class="col-auto align-self-center">
-						  <h5 class="mb-0 card-header-white-text" data-anchor="data-anchor">My Open Tickets</h5>
-						</div>
-					  </div>
-					</div>
-					<div class="card-body pt-0">
-					  <div class="tab-content">
-						<div class="tab-pane preview-tab-pane active" role="tabpanel" aria-labelledby="tab-dom-929b4ec7-a105-4155-ad16-2ad8bbc32b32" id="dom-929b4ec7-a105-4155-ad16-2ad8bbc32b32">
-						  <div class="table-responsive scrollbar">
-							<table class="table">
-							  <thead>
-								<tr>
-									<th scope="col">ID</th>
-									<th scope="col">Date</th>
-									<th scope="col">Project</th>
-									<th scope="col">Issue Title</th>
-									<th scope="col">Priority</th>
-									<th scope="col">Status</th>
-								  </tr>
-							  </thead>
-							  <tbody>
-								<tr>
-									<td colspan="6">
-										<p class="text-center">No Pending Tickets</p>
-									</td>
-								</tr>
-							  </tbody>
-							</table>
-						  </div>
-						</div>
-						<div class="tab-pane code-tab-pane" role="tabpanel" aria-labelledby="tab-dom-656ad873-9efc-440c-ba8c-5673c9358939" id="dom-656ad873-9efc-440c-ba8c-5673c9358939">
-					  <pre class="scrollbar rounded-1" style="max-height:420px"><code class="language-html">&lt;div class=&quot;table-responsive scrollbar&quot;&gt;
-						  &lt;table class=&quot;table&quot;&gt;
-							  &lt;thead&gt;
-								&lt;tr&gt;
-									&lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
-									&lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
-									&lt;th scope=&quot;col&quot;&gt;Project&lt;/th&gt;
-									&lt;th scope=&quot;col&quot;&gt;Issue Title&lt;/th&gt;
-									&lt;th scope=&quot;col&quot;&gt;Priority&lt;/th&gt;
-									&lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
-								  &lt;/tr&gt;
-							  &lt;/thead&gt;
-							  &lt;tbody&gt;
-								&lt;tr&gt;
-									&lt;td colspan=&quot;6&quot;&gt;
-										&lt;p class=&quot;text-center&quot;&gt;No Pending Tickets&lt;/p&gt;
-									&lt;/td&gt;
-								&lt;/tr&gt;
-							  &lt;/tbody&gt;
-							&lt;/table&gt;
-	&lt;/div&gt;</code></pre>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			</div>
 
-			<!--cancel account modal-->
-			<div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">
-				  <div class="modal-content position-relative">
-					<div class="position-absolute top-0 end-0 mt-2 me-2 z-1">
-					  <button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body p-0">
-					  <div class="p-4 pb-0">
-						<form>
-						  <div class="mb-3">
-							<h5><strong>Are you sure you wish to cancel your account?</strong></h5>
-						  </div>
-						  <div class="mb-3 mt-4">
-							<p>By doing so you will no longer receive any survey opportunities AND you will forfeit any reward points you may have accumulated.</p>
-						  </div>
-						</form>
-					  </div>
-					</div>
-					<div class="modal-footer">
-					  <button class="btn btn-primary" type="button">Yes </button>
-					  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">No</button>
-					</div>
+      <div class="card mb-3 mt-2">
+			  <div class="card-body position-relative">
+				<div class="row">
+				  <div class="col-lg-12">
+					<h4>My Rewards</h4>
+          <p>Welcome, Lesego Zikomo Sciacchitano!</p>
+          <p>As a thank you for your ongoing participation, please choose from any of the following rewards:</p>
+
+
+          <div class="card mb-3  mt-4 border border-secondary">
+            <div class="card-header border-bottom card-header-gray">
+              <div class="row flex-between-end">
+              <div class="col-auto align-self-center">
+                <h5 class="mb-0 card-header-white-text" data-anchor="data-anchor">$10 Gift Card via Reward Link</h5>
+              </div>
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-md-2 text-center">
+                <img src="https://bizpinion.com/upload/image/reward/tango_image.png" class="mt-4 img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <p class="card-text">Redeem 1,000 Reward points for a $10 gift card of your choice via Reward Link. Reward Link is the premier “Get Exactly What You Want” gift card provider and allows you to redeem your Reward points for digital gift cards from top retailers such as iTunes, Amazon.com, Starbucks, Target, Home Depot, Pottery Barn, and Fandango just to name a few. You can also donate any portion to charity. Reward Link is perfect because YOU get to choose how, where and what to use it for. Use your redeemed digital gift cards online, in store or on your mobile device. You will receive an email, typically within 48 hours, with your Reward Link details and instruction on how to redeem the gift card you have selected. 
+                    <br/><br/>
+                    * The merchants represented are not sponsors of the rewards or otherwise affiliated with Bizpinion and/or Empanel Online, Inc. The logos and other identifying marks attached are trademarks of and owned by each represented company and/or its affiliates. Please visit each company's website for additional terms and conditions.
+                    <br/><br/>
+                  <i>Expires on 30,Oct 2024</i>
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex bd-highlight mb-3 mt-4">
+                <div class="me-auto bd-highlight ms-4"><strong>Reward points required for redemption:</strong> 1,000</div>
+                <div class="bd-highlight me-4"><input type="submit" value="Redeem" class="btn btn-secondary me-1 mb-1" disabled>**Insufficient Points</div>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="card mb-3  mt-4 border border-secondary">
+              <div class="card-header border-bottom card-header-gray">
+                <div class="row flex-between-end">
+                <div class="col-auto align-self-center">
+                  <h5 class="mb-0 card-header-white-text" data-anchor="data-anchor">$25 Cash (via PayPal)</h5>
+                </div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-md-2 text-center">
+                  <img src="https://bizpinion.com/upload/image/reward/logo_paypal_106x29.png" class="mt-4 img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                    <p class="card-text">Redeem 2,550 Reward points for a $25 cash deposit via PayPal. Registration is FREE for new members and your deposit is typically available within your PayPal account in 48 hours.resented are not sponsors of the rewards or otherwise affiliated with Bizpinion and/or Empanel Online, Inc. The logos and other identifying marks attached are trademarks of and owned by each represented company and/or its affiliates. Please visit each company's website for additional terms and conditions.
+                      <br/><br/>                  
+                      <i>Expires on 01,Jan 2025</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex bd-highlight mb-3 mt-4">
+                  <div class="me-auto bd-highlight ms-4"><strong>Reward points required for redemption:</strong> 2,550</div>
+                  <div class="bd-highlight me-4"><input type="submit" value="Redeem" class="btn btn-secondary me-1 mb-1" disabled>**Insufficient Points</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3  mt-4 border border-secondary">
+              <div class="card-header border-bottom card-header-gray">
+                <div class="row flex-between-end">
+                <div class="col-auto align-self-center">
+                  <h5 class="mb-0 card-header-white-text" data-anchor="data-anchor">$50 Cash (via PayPal)</h5>
+                </div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-md-2 text-center">
+                  <img src="https://bizpinion.com/upload/image/reward/logo_paypal_106x29.png" class="mt-4 img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                    <p class="card-text">Redeem 5,100 Reward points for a $50 cash deposit via PayPal. Registration is FREE for new members and your deposit is typically available within your PayPal account in 48 hours.
+                      <br/><br/>                  
+                      <i>Expires on 01,Jan 2025</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex bd-highlight mb-3 mt-4">
+                  <div class="me-auto bd-highlight ms-4"><strong>Reward points required for redemption:</strong> 5,100</div>
+                  <div class="bd-highlight me-4"><input type="submit" value="Redeem" class="btn btn-secondary me-1 mb-1" disabled>**Insufficient Points</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3  mt-4 border border-secondary">
+              <div class="card-header border-bottom card-header-gray">
+                <div class="row flex-between-end">
+                <div class="col-auto align-self-center">
+                  <h5 class="mb-0 card-header-white-text" data-anchor="data-anchor">$100 Cash (via PayPal)</h5>
+                </div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-md-2 text-center">
+                  <img src="https://bizpinion.com/upload/image/reward/logo_paypal_106x29.png" class="mt-4 img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                    <p class="card-text">Redeem 10,200 Reward points for a $100 cash deposit via PayPal. Registration is FREE for new members and your deposit is typically available within your PayPal account in 48 hours.
+                      <br/><br/>                  
+                      <i>Expires on 01,Jan 2025</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex bd-highlight mb-3 mt-4">
+                  <div class="me-auto bd-highlight ms-4"><strong>Reward points required for redemption:</strong> 10,200</div>
+                  <div class="bd-highlight me-4"><input type="submit" value="Redeem" class="btn btn-secondary me-1 mb-1" disabled>**Insufficient Points</div>
+                </div>
+              </div>
+            </div>
+
+
+            
+              
 				  </div>
 				</div>
 			  </div>
+		  </div>
+
+      
+      <!--cancel account modal-->
+      <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">
+          <div class="modal-content position-relative">
+            <div class="position-absolute top-0 end-0 mt-2 me-2 z-1">
+              <button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="p-4 pb-0">
+                <form>
+                  <div class="mb-3">
+                    <h5><strong>Are you sure you wish to cancel your account?</strong></h5>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <p>By doing so you will no longer receive any survey opportunities AND you will forfeit any reward points you may have accumulated.</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" type="button">Yes </button>
+              <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
           <footer class="footer">
             <div class="row g-0 justify-content-between fs--1 mt-4 mb-3">
               <div class="col-12 col-sm-auto text-center">
@@ -572,6 +488,7 @@
     <script src="../assets/js/theme.js"></script>
     <script src="../vendors/dataTables-bs5/jquery.dataTables.min.js"></script>
     <script src="../vendors/dataTables-bs5/dataTables.bootstrap5.min.js"></script>
+
   </body>
 
 </html>

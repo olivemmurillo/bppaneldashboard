@@ -37,6 +37,8 @@
     <link href="../assets/css/theme.css" rel="stylesheet" id="style-default">
     <link href="../assets/css/user-rtl.css" rel="stylesheet" id="user-style-rtl">
     <link href="../assets/css/user.css" rel="stylesheet" id="user-style-default">
+    <link href="../vendors/dataTables-bs5/dataTables.bootstrap5.min.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
     <script>
@@ -54,6 +56,7 @@
         userLinkRTL.setAttribute('disabled', true);
       }
     </script>
+    <script src="https://bizpinion.com/js/jquery.js"></script>
   </head>
 
 
@@ -102,23 +105,23 @@
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">person</span></span><span class="nav-link-text ps-1">My Account</span>
                     </div>
                   </a>
-                  <!-- parent pages--><a class="nav-link" href="../pages/landing.html" role="button">
+                  <!-- parent pages--><a class="nav-link" href="../pages/bp_surveys.html" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">receipt</span></span><span class="nav-link-text ps-1">My Surveys</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link" href="../pages/landing.html" role="button">
+				  <!-- parent pages--><a class="nav-link" href="../pages/bp_rewards.html" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">card_giftcard</span></span><span class="nav-link-text ps-1">My Rewards</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link" href="../pages/landing.html" role="button">
+				  <!-- parent pages--><a class="nav-link"  target="_blank" href="https://bizpinion.com/pages/frequently-asked-questions-faq-/" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">contact_support</span></span><span class="nav-link-text ps-1">F.A.Q.</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link" href="../pages/landing.html" role="button">
+				  <!-- parent pages--><a class="nav-link" href="../pages/bp_ticket.html" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">live_help</span></span><span class="nav-link-text ps-1">Support Center</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link" href="../pages/landing.html" role="button">
+				  <!-- parent pages--><a class="nav-link" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#error-modal" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">person_remove</span></span><span class="nav-link-text ps-1">Cancel Account</span>
                     </div>
                   </a>
@@ -147,8 +150,8 @@
                     <span class="dropdown-item">Lesego Zikomo Sciacchitano</span>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="../pages/bp_profile.html">Account Settings</a>
-					<a class="dropdown-item" href="../pages/user/settings.html">Change Password</a>
-					<a class="dropdown-item" href="../pages/user/settings.html">Need Help?</a>
+					<a class="dropdown-item" href="../pages/bp_changepass.html">Change Password</a>
+					<a class="dropdown-item" href="../pages/bp_ticket.html">Need Help?</a>
                     <a class="dropdown-item" href="../pages/authentication/card/logout.html">Logout</a>
                   </div>
                 </div>
@@ -157,8 +160,8 @@
           </nav>
 		  
 		  
-		  <button class="btn btn-falcon-primary me-1 mb-1" type="button">Edit Profile</button>
-		  <button class="btn btn-falcon-primary me-1 mb-1" type="button">Security Questions</button>
+		  <a href="bp_editprofile.html"><button class="btn btn-falcon-primary me-1 mb-1" type="button">Edit Profile</button></a>
+		  <a href="bp_securityquestion.html"><button class="btn btn-falcon-primary me-1 mb-1" type="button">Security Questions</button></a>
 		  
 		  
 		  <div class="card mb-3 mt-2">
@@ -304,7 +307,32 @@
 				</div>
 			  </div>
 		  </div>
-
+      <!--cancel account modal-->
+      <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">
+          <div class="modal-content position-relative">
+            <div class="position-absolute top-0 end-0 mt-2 me-2 z-1">
+              <button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="p-4 pb-0">
+                <form>
+                  <div class="mb-3">
+                    <h5><strong>Are you sure you wish to cancel your account?</strong></h5>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <p>By doing so you will no longer receive any survey opportunities AND you will forfeit any reward points you may have accumulated.</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" type="button">Yes </button>
+              <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
           <footer class="footer">
             <div class="row g-0 justify-content-between fs--1 mt-4 mb-3">
               <div class="col-12 col-sm-auto text-center">
@@ -422,7 +450,8 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="../vendors/list.js/list.min.js"></script>
     <script src="../assets/js/theme.js"></script>
-
+    <script src="../vendors/dataTables-bs5/jquery.dataTables.min.js"></script>
+    <script src="../vendors/dataTables-bs5/dataTables.bootstrap5.min.js"></script>
   </body>
 
 </html>

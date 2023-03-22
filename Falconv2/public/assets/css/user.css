@@ -12,3 +12,8 @@
 .card-header-white-text {
 	color: #FFFFFF;
 }
+
+.card-header-gray {
+    border-color: #ebeef4;
+    background-color: #bebebe;
+}
