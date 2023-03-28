@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Bizpinion - Security Question</title>
+    <title>Bizpinion - Support Center</title>
 
 
     <!-- ===============================================-->
@@ -61,6 +61,13 @@
 
 
   <body>
+    <script>
+      $(document).ready(function() {
+          $('#opentickets').DataTable();
+
+          $('#closedtickets').DataTable();
+      });
+  </script>
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -117,7 +124,7 @@
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">contact_support</span></span><span class="nav-link-text ps-1">F.A.Q.</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link" href="../pages/bp_ticket.html" role="button">
+				  <!-- parent pages--><a class="nav-link  active" href="../pages/bp_ticket.html" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">live_help</span></span><span class="nav-link-text ps-1">Support Center</span>
                     </div>
                   </a>
@@ -159,59 +166,64 @@
             </ul>
           </nav>
 		  
-      <nav style="--falcon-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%23748194'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../pages/bp_profile.html">My Account</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Security Questions</li>
-        </ol>
-      </nav>
-      <div class="card mb-3 mt-3">
-        <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../assets/img/icons/spot-illustrations/corner-4.png);">
-        </div> <!--/.bg-holder-->
-        <div class="card-body position-relative">
-          <div class="row">
-            <div class="col-lg-10">
-              <h2>Security Questions</h2>
-              <p class="mt-2">For an increased level of security on your account, please answer the following two optional security questions.</span></a>
-                <div class="col-lg-6">
-                  <select name="s_id_1" id="s_id_1" class="form-select mt-2" >
-                    <option value="1" >In what city was your first job?</option>
-                    <option value="2" >What is the name of your favorite childhood friend?</option>
-                    <option value="3" >What street did you live on in third grade?</option>
-                    <option value="4" >What is your spouse's maiden name?</option>
-                    <option value="5" >What is the name of your favorite childhood teacher?</option>
-                    <option value="6" >What is your grandmother's first name?</option>
-                    <option value="7" >What was your high school mascot?</option>
-                  </select>
-                  <div class="input-group mb-3 mt-2">
-                    <input type="text" value="" class="validate[required] form-control" id="s_ans_1" name="s_ans_1">
-                  </div>
+		  
+          <div class="card mb-3 mt-3">
+            <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../assets/img/icons/spot-illustrations/corner-4.png);">
+            </div> <!--/.bg-holder-->
+            <div class="card-body position-relative">
+              <div class="row">
+                <div class="col-lg-10">
+                  <h2>Support Center</h2>
 
-                  <select name="s_id_2" id="s_id_2" class="form-select mt-4" >
-                    <option value="1" >In what city was your first job?</option>
-                    <option value="2" >What is the name of your favorite childhood friend?</option>
-                    <option value="3" >What street did you live on in third grade?</option>
-                    <option value="4" >What is your spouse's maiden name?</option>
-                    <option value="5" >What is the name of your favorite childhood teacher?</option>
-                    <option value="6" >What is your grandmother's first name?</option>
-                    <option value="7" >What was your high school mascot?</option>
-                  </select>
-                  <div class="input-group mb-3 mt-2">
-                    <input type="text" value="" class="validate[required] form-control" id="s_ans_2" name="s_ans_2">
+                    <div class="col-lg-6">
+                      <p>Response To Ticket#26 Issue Title : Other - not listed above</p>
+                      <hr/>
+                      <p>Please disregard. Test ticket.</p>
+                      <div class="mb-3">
+                        <textarea class="form-control" id="prob_desc" name="prob_desc" rows="3"></textarea>
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input class="form-check-input" id="statusopen" type="radio" name="status" checked="checked" />
+                          <label class="form-check-label mb-0" for="statusopen">Open</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" id="statusclose" type="radio" name="status"  />
+                          <label class="form-check-label mb-0" for="statusclose">Close</label>
+                        </div>
+                      </div>
                   </div>
+                  <button class="btn btn-primary me-1 mb-1" type="button">Reply
+                  </button>
+                  <button class="btn btn-secondary me-1 mb-1" type="button">Cancel
+                  </button>
+                  <!--
+                  <div class="table-responsive scrollbar mt-3">
+                    <table class="table table-striped  table-bordered">
+                      <thead>
+                      <tr>
+                        <p>Test reply 2</p>
+                        <small>2023-03-28 14:51:08 - Olive Murz</small>
+                      </tr>
+                      <tr>
+                        <p>Test reply 1</p>
+                        <small>2023-03-28 14:51:08 - Olive Murz</small>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <td>
+                          
+                        </td>
+                      </tbody>
+                    </table>
+                  </div>
+                  -->
+                </div>
               </div>
-              <a href="bp_securityquestion_success.html"><button class="btn btn-primary me-1 mb-1" type="button">Update
-              </button></a>
-              <button class="btn btn-secondary me-1 mb-1" type="button">Cancel
-              </button>
             </div>
           </div>
-        </div>
-      </div>
       
 
-
-      
       <!--cancel account modal-->
       <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">

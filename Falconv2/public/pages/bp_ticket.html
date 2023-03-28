@@ -108,7 +108,7 @@
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">dashboard</span></span><span class="nav-link-text ps-1">My Dashboard</span>
                     </div>
                   </a>
-                  <!-- parent pages--><a class="nav-link active" href="../pages/bp_profile.html" role="button">
+                  <!-- parent pages--><a class="nav-link" href="../pages/bp_profile.html" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">person</span></span><span class="nav-link-text ps-1">My Account</span>
                     </div>
                   </a>
@@ -124,8 +124,8 @@
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">contact_support</span></span><span class="nav-link-text ps-1">F.A.Q.</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link" href="../pages/bp_ticket.html" role="button">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">live_help</span></span><span class="nav-link-text ps-1">Support Center</span>
+				  <!-- parent pages--><a class="nav-link active" href="../pages/bp_ticket.html" role="button">
+                    <div class="d-flex align-items-center "><span class="nav-link-icon"><span class="material-icons text-600 fs-1">live_help</span></span><span class="nav-link-text ps-1">Support Center</span>
                     </div>
                   </a>
 				  <!-- parent pages--><a class="nav-link" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#error-modal" role="button">
@@ -169,20 +169,20 @@
 		  
       <h2>Support Center</h2>
 
-      <button class="btn btn-falcon-primary me-1 mb-1 mt-3" type="button">Submit Ticket</button>
+      <a href="bp_addticket.html"><button class="btn btn-falcon-primary me-1 mb-1 mt-3" type="button">Submit Ticket</button></a>
 
       <div class="card mb-3 mt-2">
 			  <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../assets/img/icons/spot-illustrations/corner-9.png);">
 			  </div> <!--/.bg-holder-->
 			  <div class="card-body position-relative">
 				<div class="row">
-				  <div class="col-lg-8">
+				  <div class="col-lg-10">
 					<h4>Available Surveys</h4>
             <div class="table-responsive scrollbar">
               <table class="table" id="opentickets">
                 <thead>
                 <tr>
-                  <th scope="col">ID</th>
+                  <th scope="col"  style="width: 10%">ID</th>
                   <th scope="col">Date</th>
                   <th scope="col">Project</th>
                   <th scope="col">Issue Title</th>
@@ -192,7 +192,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                
+                  <td><a href="bp_editticket.html">26  | <i class="bi bi-file-earmark-post"></i></a></td>
+                  <td>2023-03-28 12:44:13</td>
+                  <td>General</td>
+                  <td>Other - not listed above</td>
+                  <td>Please disregard. Test ticket.</td>
+                  <td>Low</td>
+                  <td>Open</td>
                 </tbody>
               </table>
               </div>
@@ -207,7 +213,7 @@
 			  </div> <!--/.bg-holder-->
 			  <div class="card-body position-relative">
 				<div class="row">
-				  <div class="col-lg-8">
+				  <div class="col-lg-10">
 					<h4>My Closed Tickets</h4>
             <div class="table-responsive scrollbar">
               <table class="table" id="closedtickets">

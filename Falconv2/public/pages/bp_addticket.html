@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Bizpinion - Security Question</title>
+    <title>Bizpinion - Support Center</title>
 
 
     <!-- ===============================================-->
@@ -61,6 +61,13 @@
 
 
   <body>
+    <script>
+      $(document).ready(function() {
+          $('#opentickets').DataTable();
+
+          $('#closedtickets').DataTable();
+      });
+  </script>
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -117,7 +124,7 @@
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">contact_support</span></span><span class="nav-link-text ps-1">F.A.Q.</span>
                     </div>
                   </a>
-				  <!-- parent pages--><a class="nav-link" href="../pages/bp_ticket.html" role="button">
+				  <!-- parent pages--><a class="nav-link  active" href="../pages/bp_ticket.html" role="button">
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="material-icons text-600 fs-1">live_help</span></span><span class="nav-link-text ps-1">Support Center</span>
                     </div>
                   </a>
@@ -159,59 +166,138 @@
             </ul>
           </nav>
 		  
-      <nav style="--falcon-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%23748194'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../pages/bp_profile.html">My Account</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Security Questions</li>
-        </ol>
-      </nav>
-      <div class="card mb-3 mt-3">
-        <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../assets/img/icons/spot-illustrations/corner-4.png);">
-        </div> <!--/.bg-holder-->
-        <div class="card-body position-relative">
-          <div class="row">
-            <div class="col-lg-10">
-              <h2>Security Questions</h2>
-              <p class="mt-2">For an increased level of security on your account, please answer the following two optional security questions.</span></a>
-                <div class="col-lg-6">
-                  <select name="s_id_1" id="s_id_1" class="form-select mt-2" >
-                    <option value="1" >In what city was your first job?</option>
-                    <option value="2" >What is the name of your favorite childhood friend?</option>
-                    <option value="3" >What street did you live on in third grade?</option>
-                    <option value="4" >What is your spouse's maiden name?</option>
-                    <option value="5" >What is the name of your favorite childhood teacher?</option>
-                    <option value="6" >What is your grandmother's first name?</option>
-                    <option value="7" >What was your high school mascot?</option>
-                  </select>
-                  <div class="input-group mb-3 mt-2">
-                    <input type="text" value="" class="validate[required] form-control" id="s_ans_1" name="s_ans_1">
-                  </div>
+		  
+          <div class="card mb-3 mt-3">
+            <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../assets/img/icons/spot-illustrations/corner-4.png);">
+            </div> <!--/.bg-holder-->
+            <div class="card-body position-relative">
+              <div class="row">
+                <div class="col-lg-10">
+                  <h2>Support Center</h2>
 
-                  <select name="s_id_2" id="s_id_2" class="form-select mt-4" >
-                    <option value="1" >In what city was your first job?</option>
-                    <option value="2" >What is the name of your favorite childhood friend?</option>
-                    <option value="3" >What street did you live on in third grade?</option>
-                    <option value="4" >What is your spouse's maiden name?</option>
-                    <option value="5" >What is the name of your favorite childhood teacher?</option>
-                    <option value="6" >What is your grandmother's first name?</option>
-                    <option value="7" >What was your high school mascot?</option>
-                  </select>
-                  <div class="input-group mb-3 mt-2">
-                    <input type="text" value="" class="validate[required] form-control" id="s_ans_2" name="s_ans_2">
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label class="form-label fw-bold" for="problem_id">Problem</label>
+                        <select name="problem_id" id="problem_id" class="form-select">
+                          <option value="2">Survey Related Problem</option>
+                          <option value="1">Rewards Problem</option>
+                          <option value="5">Password Issue</option>
+                          <option value="6">General Question</option>
+                          <option value="3">Other - not listed above</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label fw-bold" for="priority">Priority</label>
+                        <select name="priority" id="priority" class="form-select">
+                          <option value="Low">Low</option>
+                          <option value="Medium">Medium</option>
+                          <option value="High">High</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label fw-bold" for="proj_id">Project</label>
+                        <select name="proj_id" id="proj_id" class="form-select">
+                          <option value="">Select Project/Not Applicable</option>
+                          <option value="27002">27002-New Survey</option>
+                          <option value="26964">26964-New Survey</option>
+                          <option value="26958">26958-New Survey</option>
+                          <option value="26904">26904-New Survey</option>
+                          <option value="26887">26887-New Survey</option>
+                          <option value="26874">26874-New Survey</option>
+                          <option value="26857">26857-New Survey</option>
+                          <option value="26856">26856-New Survey</option>
+                          <option value="26845">26845-New Survey</option>
+                          <option value="26841">26841-New Survey</option>
+                          <option value="26840">26840-New Survey</option>
+                          <option value="26838">26838-New Survey</option>
+                          <option value="26821">26821-New Study</option>
+                          <option value="26786">26786-New Survey</option>
+                          <option value="26778">26778-New Survey</option>
+                          <option value="26777">26777-New Survey</option>
+                          <option value="26767">26767-New Survey</option>
+                          <option value="26765">26765-New Survey</option>
+                          <option value="26673">26673-New Survey</option>
+                          <option value="26663">26663-New Survey</option>
+                          <option value="26615">26615-New Survey</option>
+                          <option value="26574">26574-New Survey</option>
+                          <option value="26564">26564-New Survey</option>
+                          <option value="26562">26562-New Survey</option>
+                          <option value="26542">26542-New Survey</option>
+                          <option value="26537">26537-New Survey</option>
+                          <option value="26521">26521-New Survey</option>
+                          <option value="26469">26469-New Survey</option>
+                          <option value="26385">26385-New Survey</option>
+                          <option value="26383">26383-New Survey</option>
+                          <option value="26315">26315-New Survey</option>
+                          <option value="26313">26313-New Survey</option>
+                          <option value="26276">26276-New Survey</option>
+                          <option value="26273">26273-New Survey</option>
+                          <option value="26256">26256-New Survey</option>
+                          <option value="26205">26205-New Survey</option>
+                          <option value="26202">26202-New Survey</option>
+                          <option value="26152">26152-New Survey</option>
+                          <option value="26150">26150-New Survey</option>
+                          <option value="26120">26120-New Survey</option>
+                          <option value="26035">26035-New Survey</option>
+                          <option value="25969">25969-New Survey</option>
+                          <option value="25902">25902-New Survey</option>
+                          <option value="25894">25894-New Survey</option>
+                          <option value="25893">25893-New Survey</option>
+                          <option value="25891">25891-New Survey</option>
+                          <option value="25841">25841-New Survey</option>
+                          <option value="25840">25840-New Survey</option>
+                          <option value="25832">25832-New Study</option>
+                          <option value="25823">25823-New Survey</option>
+                          <option value="25801">25801-New Survey</option>
+                          <option value="25792">25792-New Survey</option>
+                          <option value="25770">25770-New Survey</option>
+                          <option value="25736">25736-New Survey</option>
+                          <option value="25708">25708-New Survey</option>
+                          <option value="25701">25701-New Survey</option>
+                          <option value="25580">25580-New Survey</option>
+                          <option value="25525">25525-New Survey</option>
+                          <option value="25485">25485-New Survey</option>
+                          <option value="25477">25477-New Survey</option>
+                          <option value="25465">25465-New Survey</option>
+                          <option value="25388">25388-New Survey</option>
+                          <option value="25325">25325-New Survey</option>
+                          <option value="25264">25264-New Survey</option>
+                          <option value="25222">25222-New Survey</option>
+                          <option value="25203">25203-New Survey</option>
+                          <option value="25155">25155-New Survey</option>
+                          <option value="25115">25115-New Survey</option>
+                          <option value="24993">24993-New Survey</option>
+                          <option value="24972">24972-New Survey</option>
+                          <option value="24962">24962-New Survey</option>
+                          <option value="24858">24858-New Survey</option>
+                          <option value="24778">24778-New Survey</option>
+                          <option value="24775">24775-New Survey</option>
+                          <option value="24766">24766-New Survey</option>
+                          <option value="24695">24695-New Survey</option>
+                          <option value="24690">24690-New Survey</option>
+                          <option value="24629">24629-New Survey</option>
+                          <option value="24615">24615-New Survey</option>
+                          <option value="24577">24577-New Survey</option>
+                          <option value="24575">24575-New Survey</option>
+                          <option value="24540">24540-New Survey</option>
+                          <option value="24392">24392-New Study</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label fw-bold" for="prob_desc">Description</label>
+                        <textarea class="form-control" id="prob_desc" name="prob_desc" rows="3" placeholder="Description"></textarea>
+                      </div>
                   </div>
+                  <button class="btn btn-primary me-1 mb-1" type="button">Send Ticket
+                  </button>
+                  <button class="btn btn-secondary me-1 mb-1" type="button">Cancel
+                  </button>
+                </div>
               </div>
-              <a href="bp_securityquestion_success.html"><button class="btn btn-primary me-1 mb-1" type="button">Update
-              </button></a>
-              <button class="btn btn-secondary me-1 mb-1" type="button">Cancel
-              </button>
             </div>
           </div>
-        </div>
-      </div>
       
 
-
-      
       <!--cancel account modal-->
       <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">
