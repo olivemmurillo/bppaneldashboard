@@ -38,7 +38,6 @@
     <link href="../assets/css/user-rtl.css" rel="stylesheet" id="user-style-rtl">
     <link href="../assets/css/user.css" rel="stylesheet" id="user-style-default">
     <link href="../vendors/dataTables-bs5/dataTables.bootstrap5.min.css" rel="stylesheet">
-    
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
@@ -58,92 +57,10 @@
       }
     </script>
     <script src="https://bizpinion.com/js/jquery.js"></script>
-    <link type="text/css" href="https://bizpinion.com/css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
-    <script type="text/JavaScript" src="https://bizpinion.com/js/jquery-ui-1.8.21.custom.min.js"></script>
-    
   </head>
 
 
   <body>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-          $("#6").datepicker({
-              altField: "#alt2",
-              dateFormat: "yy-mm-dd",
-              showOn: "both",
-              buttonImage: "https://bizpinion.com/js/calendar.gif",
-              minDate: "-90y",
-              maxDate: "-18y",
-              yearRange: '-90:-18',
-              changeMonth: true,
-              changeYear: true,
-              buttonImageOnly: true
-          });
-          
-      });
-          /* jQuery UI date picker plugin for ML translate */
-      /* Written by Nilesh. */
-      jQuery(function($){
-          $.datepicker.regional['biz_translate'] = {
-              closeText: 'Done',
-              prevText: 'Prev',
-              nextText: 'Next',
-              currentText: 'Today',
-              monthNames: ['January'
-                  ,'February'
-                  ,'March'
-                  ,'April'
-                  ,'May'
-                  ,'June'
-                  ,'July'
-                  ,'August'
-                  ,'September'
-                  ,'October'
-                  ,'November'
-                  ,'December'],
-              monthNamesShort: ['Jan'
-                  , 'Feb'
-                  , 'Mar'
-                  , 'Apr'
-                  , 'May'
-                  , 'Jun'
-                  , 'Jul'
-                  , 'Aug'
-                  , 'Sep'
-                  , 'Oct'
-                  , 'Nov'
-                  , 'Dec'],
-              dayNames: ['Sunday'
-                  , 'Monday'
-                  , 'Tuesday'
-                  , 'Wednesday'
-                  , 'Thursday'
-                  , 'Friday'
-                  , 'Saturday'],
-              dayNamesShort: ['Sun'
-                  , 'Mon'
-                  , 'Tue'
-                  , 'Wed'
-                  , 'Thu'
-                  , 'Fri'
-                  , 'Sat'],
-              dayNamesMin: ['Su'
-                  ,'Mo'
-                  ,'Tu'
-                  ,'We'
-                  ,'Th'
-                  ,'Fr'
-                  ,'Sa'],
-              weekHeader: 'Wk',
-              dateFormat: 'dd/mm/yy',
-              firstDay: 1,
-              isRTL: false,
-              showMonthAfterYear: false,
-              yearSuffix: ''};
-          $.datepicker.setDefaults($.datepicker.regional['biz_translate']);
-      });
-  </script>
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -251,6 +168,10 @@
       
       <div class="card mb-3 mt-2">
         <div class="card-body position-relative">
+          <div class="alert alert-success border-2 d-flex align-items-center" role="alert">
+            <div class="bg-success me-3 icon-item"><span class="fas fa-check-circle text-white fs-3"></span></div>
+            <p class="mb-0 flex-1">Your registration information has been successfully updated.</p>
+          </div>
           <div class="row">
             <div class="col-lg-7">
               <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -271,11 +192,10 @@
                     <label class="form-label fw-bold" for="lname">Last Name: </label>
                     <input class="form-control" type="text" id="lname" name="lname" value="Sciacchitano" />
                   </div>
-                  <div class="mb-3 w-25">
+                  <div class="mb-3">
                     <label class="form-label fw-bold" for="6">Date of Birth: </label>
-                    <input class="form-control datetimepicker" type="text" name="6" id="6" value="1995-03-24" readonly="readonly" />
+                    <input class="form-control" type="text" name="6" id="6" value="04-18-1988" data-errormessage-value-missing="Date must be in YYYY-MM-DD format" data-errormessage-custom-error="Date must be in YYYY-MM-DD format" readonly="readonly" />
                   </div>
-                  
                   <div class="mb-3">
                     <label class="form-label fw-bold" for="lname">Zip/Postal Code: </label>
                     <input class="form-control" type="text" id="2" name="2" value="95667" />
@@ -1147,7 +1067,6 @@
     <script src="../assets/js/theme.js"></script>
     <script src="../vendors/dataTables-bs5/jquery.dataTables.min.js"></script>
     <script src="../vendors/dataTables-bs5/dataTables.bootstrap5.min.js"></script>
-    
   </body>
 
 </html>

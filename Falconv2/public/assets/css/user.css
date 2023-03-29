@@ -39,3 +39,16 @@
 .d-flex {
     display: flex!important;
 }
+
+.dob{
+    width: 200px;
+    display: inline-block !important;
+}
+
+.doblabel{
+    display: block;
+}
+
+.ui-datepicker-trigger{
+    margin-left: 5px;
+}
