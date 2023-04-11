@@ -61,13 +61,25 @@
 
 
   <body>
-    <script>
+    <script type="text/javascript">
       $(document).ready(function() {
-          $('#opentickets').DataTable();
+          
+          //----------------------------------------------------------------------
+          // Don't allow us to navigate away from a page on which we're changed
+          //  values on any control without a warning message.  Need to class our 
+          //  save buttons, links, etc so they can do a save without the message - 
+          //  ie. CssClass="noWarn"
+          //----------------------------------------------------------------------
+          $('input:text,input:checkbox,input:radio,textarea,select').on('change', function() {
+              $('BODY').attr('onbeforeunload',
+              "return 'Leaving this page will cause any unsaved data to be lost.';");
+          });
 
-          $('#closedtickets').DataTable();
+          $('.noWarn').click(function() { $('BODY').removeAttr('onbeforeunload'); });
+
+          
       });
-  </script>
+    </script>
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -294,8 +306,8 @@
                         <textarea class="form-control" id="prob_desc" name="prob_desc" rows="3" placeholder="Description"></textarea>
                       </div>
                   </div>
-                  <button class="btn btn-primary me-1 mb-1" type="button">Send Ticket
-                  </button>
+                  <a href="bp_addticket.html"><button class="btn btn-primary me-1 mb-1 noWarn" type="button">Send Ticket
+                  </button></a>
                   <a href="bp_ticket.html"><button class="btn btn-secondary me-1 mb-1" type="button">Cancel
                   </button></a>
                 </div>

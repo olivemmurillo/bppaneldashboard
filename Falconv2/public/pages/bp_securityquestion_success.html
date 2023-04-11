@@ -61,7 +61,25 @@
 
 
   <body>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          
+          //----------------------------------------------------------------------
+          // Don't allow us to navigate away from a page on which we're changed
+          //  values on any control without a warning message.  Need to class our 
+          //  save buttons, links, etc so they can do a save without the message - 
+          //  ie. CssClass="noWarn"
+          //----------------------------------------------------------------------
+          $('input:text,input:checkbox,input:radio,textarea,select').on('change', function() {
+              $('BODY').attr('onbeforeunload',
+              "return 'Leaving this page will cause any unsaved data to be lost.';");
+          });
 
+          $('.noWarn').click(function() { $('BODY').removeAttr('onbeforeunload'); });
+
+          
+      });
+    </script>
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
@@ -166,17 +184,49 @@
         </ol>
       </nav>
       <div class="card mb-3 mt-3">
-        
         <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../assets/img/icons/spot-illustrations/corner-4.png);">
         </div> <!--/.bg-holder-->
         <div class="card-body position-relative">
+          <div class="alert alert-success border-2 d-flex align-items-center" role="alert">
+            <div class="bg-success me-3 icon-item"><span class="fas fa-check-circle text-white fs-3"></span></div>
+            <p class="mb-0 flex-1">Your security questions have been successfully updated.</p>
+          </div>
           <div class="row">
-            <h2>Security Questions</h2>
-            <div class="alert alert-success border-2 d-flex align-items-center" role="alert">
-              <div class="bg-success me-3 icon-item"><span class="fas fa-check-circle text-white fs-3"></span></div>
-              <p class="mb-0 flex-1">Your security questions have been successfully updated.</p>
+            <div class="col-lg-10">
+              <h2>Security Questions</h2>
+              <p class="mt-2">For an increased level of security on your account, please answer the following two optional security questions.</span></a>
+                <div class="col-lg-6">
+                  <select name="s_id_1" id="s_id_1" class="form-select mt-2" >
+                    <option value="1" >In what city was your first job?</option>
+                    <option value="2" >What is the name of your favorite childhood friend?</option>
+                    <option value="3" >What street did you live on in third grade?</option>
+                    <option value="4" >What is your spouse's maiden name?</option>
+                    <option value="5" >What is the name of your favorite childhood teacher?</option>
+                    <option value="6" >What is your grandmother's first name?</option>
+                    <option value="7" >What was your high school mascot?</option>
+                  </select>
+                  <div class="input-group mb-3 mt-2">
+                    <input type="text" value="" class="validate[required] form-control" id="s_ans_1" name="s_ans_1">
+                  </div>
+
+                  <select name="s_id_2" id="s_id_2" class="form-select mt-4" >
+                    <option value="1" >In what city was your first job?</option>
+                    <option value="2" >What is the name of your favorite childhood friend?</option>
+                    <option value="3" >What street did you live on in third grade?</option>
+                    <option value="4" >What is your spouse's maiden name?</option>
+                    <option value="5" >What is the name of your favorite childhood teacher?</option>
+                    <option value="6" >What is your grandmother's first name?</option>
+                    <option value="7" >What was your high school mascot?</option>
+                  </select>
+                  <div class="input-group mb-3 mt-2">
+                    <input type="text" value="" class="validate[required] form-control" id="s_ans_2" name="s_ans_2">
+                  </div>
+              </div>
+              <a href="bp_securityquestion_success.html"><button class="btn btn-primary me-1 mb-1 noWarn" type="button">Update
+              </button></a>
+              <a href="bp_profile.html"><button class="btn btn-secondary me-1 mb-1" type="button">Cancel
+              </button></a>
             </div>
-            
           </div>
         </div>
       </div>

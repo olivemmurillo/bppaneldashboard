@@ -61,7 +61,25 @@
 
 
   <body>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          
+          //----------------------------------------------------------------------
+          // Don't allow us to navigate away from a page on which we're changed
+          //  values on any control without a warning message.  Need to class our 
+          //  save buttons, links, etc so they can do a save without the message - 
+          //  ie. CssClass="noWarn"
+          //----------------------------------------------------------------------
+          $('input:text,input:checkbox,input:radio,textarea,select').on('change', function() {
+              $('BODY').attr('onbeforeunload',
+              "return 'Leaving this page will cause any unsaved data to be lost.';");
+          });
 
+          $('.noWarn').click(function() { $('BODY').removeAttr('onbeforeunload'); });
+
+          
+      });
+    </script>
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
@@ -200,10 +218,10 @@
                     <input type="text" value="" class="validate[required] form-control" id="s_ans_2" name="s_ans_2">
                   </div>
               </div>
-              <a href="bp_securityquestion_success.html"><button class="btn btn-primary me-1 mb-1" type="button">Update
+              <a href="bp_securityquestion_success.html"><button class="btn btn-primary me-1 mb-1 noWarn" type="button">Update
               </button></a>
-              <button class="btn btn-secondary me-1 mb-1" type="button">Cancel
-              </button>
+              <a href="bp_profile.html"><button class="btn btn-secondary me-1 mb-1" type="button">Cancel
+              </button></a>
             </div>
           </div>
         </div>
