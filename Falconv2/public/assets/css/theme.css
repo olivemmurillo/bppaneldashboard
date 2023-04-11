@@ -93,7 +93,7 @@
   --falcon-warning-text: #934d25;
   --falcon-danger-text: #b82c46;
   --falcon-light-text: #748194;
-  --falcon-dark-text: #5e6e82;
+  --falcon-dark-text: #344050;
   --falcon-primary-bg-subtle: #e6effc;
   --falcon-secondary-bg-subtle: #eef0f2;
   --falcon-success-bg-subtle: #e0faef;
@@ -121,7 +121,7 @@
   --falcon-body-font-size: 1rem;
   --falcon-body-font-weight: 400;
   --falcon-body-line-height: 1.5;
-  --falcon-body-color: #5e6e82;
+  --falcon-body-color: #344050;
   --falcon-emphasis-color: #000;
   --falcon-emphasis-color-rgb: 0, 0, 0;
   --falcon-secondary-color: rgba(94, 110, 130, 0.75);
@@ -518,7 +518,7 @@
   /* -------------------------------------------------------------------------- */
   /* --------------------------------- Default -------------------------------- */
   --falcon-navbar-vertical-default-bg-color: var(--falcon-bg-navbar-glass);
-  --falcon-navbar-vertical-default-link-color: #5e6e82;
+  --falcon-navbar-vertical-default-link-color: #344050;
   --falcon-navbar-vertical-default-link-hover-color: #232e3c;
   --falcon-navbar-vertical-default-link-active-color: #2c7be5;
   --falcon-navbar-vertical-default-link-disable-color: #b6c1d2;
@@ -530,10 +530,10 @@
   --falcon-navbar-vertical-inverted-link-color: #9da9bb;
   --falcon-navbar-vertical-inverted-link-hover-color: #edf2f9;
   --falcon-navbar-vertical-inverted-link-active-color: #edf2f9;
-  --falcon-navbar-vertical-inverted-link-disable-color: #5e6e82;
+  --falcon-navbar-vertical-inverted-link-disable-color: #344050;
   --falcon-navbar-vertical-inverted-hr-color: rgba(255, 255, 255, 0.08);
   --falcon-navbar-vertical-inverted-scrollbar-color: #b6c1d2;
-  --falcon-navbar-vertical-inverted-label-color: #5e6e82;
+  --falcon-navbar-vertical-inverted-label-color: #344050;
   /* ----------------------------- Vibrant ---------------------------- */
   --falcon-navbar-vertical-vibrant-bg-image: linear-gradient(-45deg, rgba(0, 160, 255, 0.86), #0048a2), url(../img/generic/bg-navbar.png);
   --falcon-navbar-vertical-vibrant-link-color: rgba(255, 255, 255, 0.75);
@@ -690,7 +690,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-disabled-bg: #fff;
 }
@@ -704,7 +704,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-disabled-bg: #fff;
 }
@@ -718,7 +718,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-disabled-bg: #fff;
 }
@@ -732,7 +732,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-disabled-bg: #fff;
 }
@@ -746,7 +746,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-disabled-bg: #fff;
 }
@@ -760,7 +760,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-disabled-bg: #fff;
 }
@@ -774,7 +774,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-disabled-bg: #fff;
 }
@@ -788,7 +788,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-disabled-bg: #fff;
 }
@@ -800,7 +800,7 @@
 [data-bs-theme=light] .accordion {
   --falcon-accordion-border-color: rgba(0, 0, 0, 0.125);
   --falcon-accordion-bg: var(--falcon-card-bg);
-  --falcon-accordion-color: #5e6e82;
+  --falcon-accordion-color: #344050;
 }
 :root.card,
 :root .card,
@@ -857,7 +857,7 @@
 :root .list-group,
 [data-bs-theme=light] .list-group {
   --falcon-list-group-bg: #fff;
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: var(--falcon-gray-200);
   --falcon-list-group-disabled-bg: var(--falcon-card-cap-bg);
 }
@@ -865,8 +865,8 @@
 [data-bs-theme=light] .table {
   --falcon-table-border-color: #edf2f9;
   --falcon-table-striped-bg: #f9fafd;
-  --falcon-table-striped-color: #5e6e82;
-  --falcon-table-color: #5e6e82;
+  --falcon-table-striped-color: #344050;
+  --falcon-table-color: #344050;
 }
 :root .table-primary,
 [data-bs-theme=light] .table-primary {
@@ -3833,7 +3833,7 @@ progress {
   --falcon-table-bg: transparent;
   --falcon-table-border-color: #edf2f9;
   --falcon-table-accent-bg: transparent;
-  --falcon-table-striped-color: #5e6e82;
+  --falcon-table-striped-color: #344050;
   --falcon-table-striped-bg: #f9fafd;
   --falcon-table-active-color: var(--falcon-body-color);
   --falcon-table-active-bg: rgba(0, 0, 0, 0.1);
@@ -5057,7 +5057,7 @@ textarea.form-control-lg {
   --falcon-btn-font-size: 1rem;
   --falcon-btn-font-weight: 500;
   --falcon-btn-line-height: 1.5;
-  --falcon-btn-color: #5e6e82;
+  --falcon-btn-color: #344050;
   --falcon-btn-bg: transparent;
   --falcon-btn-border-width: var(--falcon-border-width);
   --falcon-btn-border-color: transparent;
@@ -6526,7 +6526,7 @@ html[data-bs-theme=dark] .tox .tox-dialog__footer .tox-button--secondary,
   --falcon-nav-tabs-border-color: #d8e2ef;
   --falcon-nav-tabs-border-radius: var(--falcon-border-radius);
   --falcon-nav-tabs-link-hover-border-color: #edf2f9 #edf2f9 #d8e2ef;
-  --falcon-nav-tabs-link-active-color: #5e6e82;
+  --falcon-nav-tabs-link-active-color: #344050;
   --falcon-nav-tabs-link-active-bg: #edf2f9;
   --falcon-nav-tabs-link-active-border-color: #d8e2ef #d8e2ef #edf2f9;
   border-bottom: var(--falcon-nav-tabs-border-width) solid var(--falcon-nav-tabs-border-color);
@@ -7398,7 +7398,7 @@ html[data-bs-theme=dark] .tox .tox-dialog__footer .tox-button--secondary,
 }
 
 .accordion {
-  --falcon-accordion-color: #5e6e82;
+  --falcon-accordion-color: #344050;
   --falcon-accordion-bg: white;
   --falcon-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --falcon-accordion-border-color: rgba(0, 0, 0, 0.125);
@@ -7915,7 +7915,7 @@ html[data-bs-theme=dark] .tox .tox-dialog__footer .tox-button--secondary,
   --falcon-list-group-item-padding-x: 1rem;
   --falcon-list-group-item-padding-y: 0.5rem;
   --falcon-list-group-action-color: var(--falcon-secondary-color);
-  --falcon-list-group-action-hover-color: #5e6e82;
+  --falcon-list-group-action-hover-color: #344050;
   --falcon-list-group-action-hover-bg: #f9fafd;
   --falcon-list-group-action-active-color: var(--falcon-body-color);
   --falcon-list-group-action-active-bg: var(--falcon-gray-200);
@@ -8863,7 +8863,7 @@ html[data-bs-theme=dark] .tox .tox-dialog__footer .tox-button--secondary,
   --falcon-popover-header-bg: var(--falcon-light);
   --falcon-popover-body-padding-x: 1rem;
   --falcon-popover-body-padding-y: 1rem;
-  --falcon-popover-body-color: #5e6e82;
+  --falcon-popover-body-color: #344050;
   --falcon-popover-arrow-width: 1rem;
   --falcon-popover-arrow-height: 0.5rem;
   --falcon-popover-arrow-border: var(--falcon-popover-border-color);
@@ -29730,7 +29730,7 @@ a[href].bg-200:hover, a[href].bg-200:focus {
 .theme-slider:hover .carousel-control-next,
 .theme-slider:hover .carousel-control-prev, .theme-slider:focus .carousel-control-next,
 .theme-slider:focus .carousel-control-prev {
-  color: #5e6e82;
+  color: #344050;
   opacity: 0.5 !important;
 }
 .theme-slider .carousel-control-prev,
@@ -29748,7 +29748,7 @@ a[href].bg-200:hover, a[href].bg-200:focus {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
-  color: #5e6e82;
+  color: #344050;
   opacity: 0;
 }
 .theme-slider .carousel-control-prev:hover, .theme-slider .carousel-control-prev:focus,
