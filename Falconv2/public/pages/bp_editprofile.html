@@ -87,7 +87,7 @@
           //  save buttons, links, etc so they can do a save without the message - 
           //  ie. CssClass="noWarn"
           //----------------------------------------------------------------------
-          $('input:text,input:checkbox,input:radio,textarea,select').one('change', function() {
+          $('input:text,input:checkbox,input:radio,textarea,select').on('change', function() {
               $('BODY').attr('onbeforeunload',
               "return 'Leaving this page will cause any unsaved data to be lost.';");
           });
