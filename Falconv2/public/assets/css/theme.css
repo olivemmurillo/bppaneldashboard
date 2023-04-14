@@ -170,7 +170,7 @@
 }
 
 [data-bs-theme=dark] {
-  --falcon-body-color: #9da9bb;
+  --falcon-body-color: #fff;
   --falcon-body-color-rgb: 157, 169, 187;
   --falcon-body-bg: #0b1727;
   --falcon-body-bg-rgb: 11, 23, 39;
@@ -266,7 +266,7 @@
   --falcon-gray-600: #748194;
   /* ------------------------------ Colored Link ------------------------------ */
   --falcon-colored-link-hover-color-600: #5d6776;
-  --falcon-gray-700: #5e6e82;
+  --falcon-gray-700: #9da9bb;
   /* ------------------------------ Colored Link ------------------------------ */
   --falcon-colored-link-hover-color-700: #4b5868;
   --falcon-gray-800: #4d5969;
@@ -527,7 +527,7 @@
   --falcon-navbar-vertical-default-label-color: var(--falcon-gray-500);
   /* ----------------------------- Inverted ---------------------------- */
   --falcon-navbar-vertical-inverted-bg-color: #232e3c;
-  --falcon-navbar-vertical-inverted-link-color: #9da9bb;
+  --falcon-navbar-vertical-inverted-link-color: #fff;
   --falcon-navbar-vertical-inverted-link-hover-color: #edf2f9;
   --falcon-navbar-vertical-inverted-link-active-color: #edf2f9;
   --falcon-navbar-vertical-inverted-link-disable-color: #344050;
@@ -565,14 +565,14 @@
   --falcon-dropdown-dark-link-hover-bg: rgba(255, 255, 255, 0.15);
   --falcon-dropdown-dark-link-active-color: #fff;
   --falcon-dropdown-dark-link-active-bg: #2c7be5;
-  --falcon-dropdown-dark-link-disabled-color: #9da9bb;
-  --falcon-dropdown-dark-header-color: #9da9bb;
+  --falcon-dropdown-dark-link-disabled-color: #fff;
+  --falcon-dropdown-dark-header-color: #fff;
   /* ---------------------------------- Modal --------------------------------- */
   /* --------------------------------- Avarar --------------------------------- */
   --falcon-avatar-status-border-color: #fff;
   --falcon-avatar-name-bg: #344050;
   --falcon-avatar-button-bg: #b6c1d2;
-  --falcon-avatar-button-hover-bg: #9da9bb;
+  --falcon-avatar-button-hover-bg: #fff;
   /* ------------------------------ Notification ------------------------------ */
   --falcon-notification-bg: #fff;
   --falcon-notification-title-bg: #f9fafd;
@@ -588,7 +588,7 @@
   --falcon-kanban-draggable-source-dragging-bg: #edf2f9;
   --falcon-kanban-bg-attachment-bg: #d8e2ef;
   --falcon-kanban-footer-color: #748194;
-  --falcon-kanban-nav-link-card-details-color: #5e6e82;
+  --falcon-kanban-nav-link-card-details-color: #fff;
   --falcon-kanban-nav-link-card-details-hover-bg: #edf2f9;
   /* --------------------------- Gradient Background -------------------------- */
   --falcon-bg-shape-bg: #4695ff;
@@ -1035,7 +1035,7 @@
   --falcon-gray-600: #748194;
   /* ------------------------------ Colored Link ------------------------------ */
   --falcon-colored-link-hover-color-600: #5d6776;
-  --falcon-gray-700: #9da9bb;
+  --falcon-gray-700: #fff;
   /* ------------------------------ Colored Link ------------------------------ */
   --falcon-colored-link-hover-color-700: #7e8796;
   --falcon-gray-800: #b6c1d2;
@@ -1056,7 +1056,7 @@
   --falcon-white: #000;
   --falcon-black: #fff;
   --falcon-body: #232e3c;
-  --falcon-body-color: #9da9bb;
+  --falcon-body-color: #fff;
   --falcon-body-bg: #0b1727;
   --falcon-border-color: rgba(255, 255, 255, 0.05);
   --falcon-link-color: #2c7be5;
@@ -1095,7 +1095,7 @@
   /*                               Navbar Vertical                              */
   /* -------------------------------------------------------------------------- */
   /* --------------------------------- Default -------------------------------- */
-  --falcon-navbar-vertical-default-link-color: #9da9bb;
+  --falcon-navbar-vertical-default-link-color: #fff;
   --falcon-navbar-vertical-default-link-hover-color: #edf2f9;
   --falcon-navbar-vertical-default-link-active-color: #2c7be5;
   --falcon-navbar-vertical-default-link-disable-color: #4d5969;
@@ -1222,7 +1222,7 @@
   --falcon-avatar-status-border-color: #0b1727;
   --falcon-avatar-name-bg: #4d5969;
   --falcon-avatar-button-bg: #4d5969;
-  --falcon-avatar-button-hover-bg: #5e6e82;
+  --falcon-avatar-button-hover-bg: #fff;
   /* ------------------------------ Notification ------------------------------ */
   --falcon-notification-bg: var(--falcon-card-cap-bg);
   --falcon-notification-title-bg: #344050;
@@ -1237,7 +1237,7 @@
   --falcon-kanban-draggable-source-dragging-bg: #0b1727;
   --falcon-kanban-bg-attachment-bg: #344050;
   --falcon-kanban-footer-color: #748194;
-  --falcon-kanban-nav-link-card-details-color: #9da9bb;
+  --falcon-kanban-nav-link-card-details-color: #fff;
   --falcon-kanban-nav-link-card-details-hover-bg: #344050;
   /* --------------------------- Gradient Background -------------------------- */
   --falcon-bg-shape-bg: #01224b;
@@ -1354,10 +1354,10 @@
 [data-bs-theme=dark] .accordion {
   --falcon-accordion-border-color: rgba(255, 255, 255, 0.125);
   --falcon-accordion-bg: #121e2d;
-  --falcon-accordion-color: #9da9bb;
+  --falcon-accordion-color: #fff;
   --falcon-accordion-button-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%235e6e82'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --falcon-accordion-button-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%235e6e82'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  --falcon-accordion-btn-color: #5e6e82;
+  --falcon-accordion-btn-color: #fff;
 }
 [data-bs-theme=dark] .dropdown-menu {
   --falcon-dropdown-bg: #232e3c;
@@ -1401,14 +1401,14 @@
 }
 [data-bs-theme=dark] .list-group {
   --falcon-list-group-bg: var(--falcon-card-cap-bg);
-  --falcon-list-group-action-hover-color: #9da9bb;
+  --falcon-list-group-action-hover-color: #fff;
   --falcon-list-group-action-hover-bg: #0b1727;
   --falcon-list-group-disabled-bg: var(--falcon-card-cap-bg);
 }
 [data-bs-theme=dark] .table {
   --falcon-table-border-color: #0b1727;
   --falcon-table-striped-bg: #0b1727;
-  --falcon-table-color: #5e6e82;
+  --falcon-table-color: #fff;
 }
 [data-bs-theme=dark] .table-primary {
   --falcon-table-bg: #09192e;
@@ -1746,7 +1746,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #9da9bb;
+  color: #fff;
   text-align: left;
 }
 
@@ -4082,7 +4082,7 @@ progress {
 .form-text {
   margin-top: 0.25rem;
   font-size: 75%;
-  color: #9da9bb;
+  color: #fff;
 }
 
 .form-control {
@@ -5952,8 +5952,8 @@ html[data-bs-theme=dark] .tox .tox-dialog__footer .tox-button--secondary,
   --falcon-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
   --falcon-dropdown-link-active-color: #fff;
   --falcon-dropdown-link-active-bg: #2c7be5;
-  --falcon-dropdown-link-disabled-color: #9da9bb;
-  --falcon-dropdown-header-color: #9da9bb;
+  --falcon-dropdown-link-disabled-color: #fff;
+  --falcon-dropdown-header-color: #fff;
 }
 
 .btn-group,
@@ -12711,7 +12711,7 @@ html[data-bs-theme=dark] .tox .tox-dialog__footer .tox-button--secondary,
 
 .text-muted {
   --falcon-text-opacity: 1;
-  color: #9da9bb !important;
+  color: #fff !important;
 }
 
 .text-black-50 {
@@ -23375,7 +23375,7 @@ html[data-bs-theme=dark] .tox .tox-dialog__footer .tox-button--secondary:disable
   content: " ";
   height: 16px;
   width: 2px;
-  background-color: #5e6e82;
+  background-color: #fff;
 }
 .btn-close-falcon:after {
   -webkit-transform: rotate(-45deg);
@@ -23681,7 +23681,7 @@ pre[class*=language-] {
 /*                                Terms sidebar                               */
 /* -------------------------------------------------------------------------- */
 .terms-sidebar .nav-link {
-  color: #9da9bb;
+  color: #fff;
   font-weight: 500;
   font-family: var(--falcon-font-sans-serif);
 }
@@ -25847,7 +25847,7 @@ html[data-bs-theme=dark] .select2-results__option.select2-results__option--highl
   --border-color: #344050;
   --category-tab-highlight-background-color: #344050;
   --category-name-background-color: #232e3c;
-  --search-focus-border-color: #9da9bb;
+  --search-focus-border-color: #fff;
 }
 [data-bs-theme=dark] .picmo__picker.picmo__picker .picmo__header {
   --secondary-background-color: #232e3c;
@@ -29240,7 +29240,7 @@ html[dir=rtl] .rtl-row-reverse {
   border: 0.125rem solid rgba(var(--falcon-danger-rgb), 0.3);
   border-top: 0;
   border-radius: 0 0 0.375rem 0.375rem;
-  color: #9da9bb;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -29874,7 +29874,7 @@ a[href].bg-200:hover, a[href].bg-200:focus {
   transition: all 0.2s ease-in-out;
 }
 .form-check-line-through:checked + label {
-  color: #9da9bb;
+  color: #fff;
   text-decoration: line-through;
 }
 .ticket-todo-list .form-check-line-through + label {
@@ -31093,7 +31093,7 @@ div[data-collapse] + .kanban-item,
   background-color: #9da9bb !important;
 }
 [data-bs-theme=dark] .dark__text-500 {
-  color: #9da9bb !important;
+  color: #fff !important;
 }
 [data-bs-theme=dark] .dark__bg-card-dark {
   background-color: #121e2d !important;
@@ -31111,7 +31111,7 @@ div[data-collapse] + .kanban-item,
   background-color: #5e6e82 !important;
 }
 [data-bs-theme=dark] .dark__text-700 {
-  color: #5e6e82 !important;
+  color: #fff !important;
 }
 [data-bs-theme=dark] .dark__bg-card-dark {
   background-color: #121e2d !important;
